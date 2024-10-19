@@ -1,0 +1,104 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+/* ----------login and register---------- */
+
+.form{
+    height:100%;
+    width: 100%;
+    background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url(metro13.jpg);
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+  }
+  .loginform{
+    width: 380px;
+    height: 480px;
+    position: relative;
+    margin: 6% auto;
+    background:rgba(255, 255, 255, 0);
+    padding:5px;
+    border-radius: 20px;
+    border: 2px solid rgba(255, 255, 255, .2);
+    backdrop-filter: blur(15px);
+    color: rgb(206, 209, 44);
+  }
+   .login h1{
+    color: #e4a620;
+    margin-top: 14px;
+    padding-top: 15px;
+    /* padding-bottom: 15px; */
+      margin-top: 30px;
+      margin-left: 50px;
+      margin-right: 50px;
+      cursor: pointer;
+  }
+  .input{
+    top: 150px;
+    position: absolute;
+    width: 340px;
+    transition: .5;
+    padding-left: 10px;
+  }
+  .input-field{
+    width: 100%;
+    height: 50px;
+    border-radius: 30px;
+    outline: none;
+    border: transparent;
+    background: transparent;
+    padding:10px;
+    margin:10px;
+    font-size: medium;
+    text-align: center;
+    color: rgba(250, 235, 215, 0.493);
+    border-left: 1px solid;
+    border-top: 1px solid;
+    border-right: 1px solid;
+    border-bottom: 1px solid;
+    overflow: hidden;
+  }
+  .input .input-field::placeholder{
+    color: rgba(250, 235, 215, 0.2);
+  }
+.remember-forgot{
+    font-weight: 400;
+    font-size: 14.5px;
+    margin-top: 12px;
+    margin-right: 180px;
+    margin-bottom: 20px;
+}
+
+  .submit-btn{
+    width: 300px;
+    height: 40px;
+    border-radius: 30px;
+    font-size: medium;
+    color: rgb(200, 206, 206);
+    border: 0;
+    outline: none;
+    /* padding: 10px 30px; */
+    cursor: pointer;
+    display: block;
+    margin-left: 22px;
+    /* margin: auto; */
+    background-color: #dd8d25;
+  }
+  .register{
+    font-weight: 400;
+    font-size: 14.5px;
+    margin-top: 40px;
+    margin-right: 80px;
+    margin-bottom: 10px;
+  }
+  .register a{
+    color: rgba(250, 235, 215, 0.493);
+  }
+  .register a:hover
+  {
+    color: #ffffff;
+  }

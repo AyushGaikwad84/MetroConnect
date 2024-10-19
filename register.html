@@ -1,0 +1,117 @@
+<html lang="en">
+<head>
+    <link rel="icon" type="image/x-icon" href="MetroConnectLogo.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="logincss.css"> -->
+    <title> Registaration Page</title>
+
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+        form{
+    height:100%;
+    width: 100%;
+    background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url(metro15.jpg);
+    /* background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),url(metro4.jpg); */
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+  }
+  .signup{
+    color: #e4a620;
+    margin-top: 10px;
+    margin-left: 70px;
+    margin-bottom: 20px;
+  }
+  .registerform{
+    width: 400px;
+    height: 550px;
+    position: relative;
+    margin: 3% auto;
+    background:rgba(255, 255, 255, 0);
+    padding:14px;
+    border-radius: 20px;
+    border: 2px solid rgba(255, 255, 255, .2);
+    backdrop-filter: blur(15px);
+    color: rgb(206, 209, 44);
+    box-shadow: 0px 4px 8px rgba(0,0,0,0.4);
+  }
+  .input-field{
+    margin-top: 20px;
+    width: 335px;
+    height: 50px;
+    border-radius: 25px;
+    outline: none;  
+    border: transparent;
+    background: transparent;
+    padding:10px;
+    margin:10px;
+    font-size: medium;
+    text-align: center;
+    color: rgba(226, 202, 169, 0.644);
+    border: 1px solid #9c9a9a;
+    overflow: hidden;
+  }
+  .input-field::placeholder{
+    color: rgba(250, 235, 215, 0.527);
+  }
+  
+  /*  here we used focus word this is used for focus the user on that that particular input field. when he clicks their color is change
+      as compared to others we can also change this color. when the user clicks the color will change gray to bit of white. */
+  .input-field:focus {
+    border: 1.8px solid #e4a620;
+    background: rgba(255, 255, 255, 0.1);
+    color: #ecd6b5;
+}
+  button{
+    width: 300px;
+    height: 47px;
+    border-radius: 25px;
+    margin-top: 20px;
+    margin-left: 15px;
+    font-size: 17px;
+    border: 0;
+    outline: none;
+    cursor: pointer;
+    display: block;
+    margin-left: 25px;
+    background: #e4a620;
+    color: #ffffff;
+  }
+  button:hover{
+    background: #cc8f0c;
+    transition: 0.5;
+  }
+
+    </style>
+</head>
+<body>
+
+    <form action="registeration.php" method="POST">
+
+        <div class="registerform">
+            <div class="signup"><h1>Sign Up form</h1></div>
+        <input type="text" class="input-field" name="name" placeholder="Enter Full Name" maxlength="30" required>
+
+        <input type="email" class="input-field" name="email" placeholder="Enter Email (Optional)" maxlength="25"><hr>
+
+        <input type="text" class="input-field" name="username" placeholder="Enter username" maxlength="20" required>
+
+        <input type="password" class="input-field" name="userpass" placeholder="Enter password" maxlength="8" required>
+
+        <input type="password" class="input-field" name="confirmpass" placeholder="Enter Confirm password" maxlength="8" required>
+
+        <button type="submit" onclick="alert('hello')" value="submit">Submit</button>
+        </div>
+
+    </form>
+    
+</body>
+</html>

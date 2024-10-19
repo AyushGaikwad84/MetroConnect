@@ -1,0 +1,454 @@
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/x-icon" href="MetroConnectLogo.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Your Ticket Now</title>
+    <link rel="stylesheet" href="simple.css">
+
+    <style>
+         body{
+            /* background-color:#FF9800;   */
+            background-color: #E8F5E9;
+            backdrop-filter: blur(2px);
+            background-repeat: no-repeat;
+            background-position: 100% 100%;
+            background-attachment:fixed;
+            background-size: 100% 100%;
+            margin: 0;
+            /* padding: 0; */
+            font-family: "Poppins", "Roboto", "Open Sans", "Lato", sans-serif;
+
+        }
+        .information {
+            width: 60%;
+            margin: 3% auto;
+            padding: 20px;
+            background-color: #ffffff;
+            /* border: 2px solid #1B5E20; */
+            backdrop-filter: blur(15px);
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.6);
+            text-align: left;
+        }
+        h3 {
+            font-size: 18px;
+            color: #5A6A8D;
+            margin-bottom: 10px;
+        }
+        .form {
+            display: grid;
+            gap: 20px;
+            grid-template-columns: repeat(2, 1fr); /* 1fr stands for "one fraction of the available space," meaning each column will 
+                                                    // take up an equal portion of the container’s width. If you wanted three columns of 
+                                                    // equal width, you would use repeat(3, 1fr) */
+            align-items: center;
+        }
+        /* 
+        .input {
+            grid-column: span 2;
+        } */
+
+        .info, .from, .to, input[type="radio"] /*input[type="checkbox"]*/ {
+            padding: 10px;
+            font-size: 18px;
+            color: #6a6b6b;
+            background-color: #ffffff;
+            border: 2px solid #aaaaaa;
+            border-radius: 5px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        .input a{
+            text-decoration: underline;
+            margin-bottom: 10px;
+            color:#3949AB;
+            font-size: 15px;
+        }
+
+        button[type="submit"] {
+            padding: 10px 20px;
+            background-color: #1A237E;
+            color: white;
+            margin-left: 280px;
+            width: 30%;
+            height: 50px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 18px;
+            transition: background-color 0.3s ease;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #3949AB;
+        }
+
+        .qrcode {
+            /* display: flex; */
+            align-items: center;
+            gap: 5px;
+        }
+
+        .qrcode img {
+            width: 200px;
+            height: 200px;
+            border-radius: 5px;
+            padding-left: 10px;
+        }
+        .information h1{
+            color:#333333;
+            text-align: center;
+            margin-bottom: 9%;
+            margin-top: 2%;
+        }
+        .upi{
+            font-size: 23px;
+            background-color: #36333323;
+            padding-left: 20px;
+            margin-bottom: 10px;
+            
+        }
+        .upi img{
+            margin-top: 10px;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <nav class="navbar">
+        <div class="logo"><a href="MetroConnect.html"><img src="MetroConnectLogo.png">MetroConnect</a>
+        </div>
+        <ul class="menu">
+            <li><a href="MetroConnect.html">Home</a></li>
+            <li><a href="About MetroConnect.html">About</a></li>
+            <li><a href="service.html">Service</a></li>
+            <li><a href="contact.html">Contact</a></li>
+           <button><a href="booking.html">Book Ticket</a></button>
+           <button><a href="log.html">Login/sign up</a></button>
+        </ul>
+    </nav> 
+
+    <div class="image">
+    <center> <img src="metro15.jpg" width="1340px" height="700px"></center>
+        </div>
+
+
+        <form method="post" action="booking.php" align="center">
+
+            <div class="information">
+
+        <h1>Journey Selection Form</h1>
+        <h3>Select Your Metro Station</h3>
+            <select id="station-select-from" name="from" class="from" required>
+                    <option value="">--Select a station--</option>
+                    <option value="PCMC">PCMC</option>
+                    <option value="Sant Tukaram Nagar">Sant Tukaram Nagar</option>
+                    <option value="Bhosri">Bhosri</option>
+                    <option value="Kasarwadi">Kasarwadi</option>
+                    <option value="Phugewadi">Phugewadi</option>
+                    <option value="Dapodi">Dapodi</option>
+                    <option value="Bhopodi">Bhopodi</option>
+                    <option value="Shivaji Nagar">Shivaji Nagar</option>
+                    <option value="District Court">District Court</option>
+                    <option value="Vanaz">Vanaz</option>
+                    <option value="Anand Nagar">Anand Nagar</option>
+                    <option value="Ideal colony">Ideal colony</option>
+                    <option value="Nal stop">Nal stop</option>
+                    <option value="Garware College">Garware College</option>
+                    <option value="Deccan gymkhana">Deccan gymkhana</option>
+                    <option value="Chhatrapati Sambhaji Udhyan">Chhatrapati Sambhaji Udhyan</option>
+                    <option value="PMC">PMC</option>
+                    <option value="Mangalwar Peth">Mangalwar Peth</option>
+                    <option value="Pune Railway Station">Pune Railway Station</option>
+                    <option value="Ruby Hall Clinic">Ruby Hall Clinic</option>
+                    <option value="Bundgarden">Bundgarden</option>
+                    <option value="Kalyan Nagar">Kalyan Nagar</option>
+                    <option value="Ramwadi">Ramwadi</option>
+            </select>
+
+        <h3>Select Your Destination</h3>
+            <select id="station-select-to" name="to" class="to" required>
+                    <option value="">--Select a station--</option>
+                    <option value="PCMC">PCMC</option>
+                    <option value="Sant Tukaram Nagar">Sant Tukaram Nagar</option>
+                    <option value="Bhosri">Bhosri</option>
+                    <option value="Kasarwadi">Kasarwadi</option>
+                    <option value="Phugewadi">Phugewadi</option>
+                    <option value="Dapodi">Dapodi</option>
+                    <option value="Bhopodi">Bhopodi</option>
+                    <option value="Shivaji Nagar">Shivaji Nagar</option>
+                    <option value="District Court">District Court</option>
+                    <option value="Vanaz">Vanaz</option>
+                    <option value="Anand Nagar">Anand Nagar</option>
+                    <option value="Ideal colony">Ideal colony</option>
+                    <option value="Nal stop">Nal stop</option>
+                    <option value="Garware College">Garware College</option>
+                    <option value="Deccan gymkhana">Deccan gymkhana</option>
+                    <option value="Chhatrapati Sambhaji Udhyan">Chhatrapati Sambhaji Udhyan</option>
+                    <option value="PMC">PMC</option>
+                    <option value="Mangalwar Peth">Mangalwar Peth</option>
+                    <option value="Pune Railway Station">Pune Railway Station</option>
+                    <option value="Ruby Hall Clinic">Ruby Hall Clinic</option>
+                    <option value="Bundgarden">Bundgarden</option>
+                    <option value="Kalyan Nagar">Kalyan Nagar</option>
+                    <option value="Ramwadi">Ramwadi</option>
+            </select><br><br><hr>
+
+            <h3>Fare Price</h3>
+            <p id="fare-display" name="fare">₹ 0.00 </p>
+            <br>
+                
+            <div class="input">
+
+                        <h3>Passanger</h3>
+                            <input type="text" class="info" name="pname" placeholder="Enter Passanger Name" required><br><br>
+
+                        <h3>Choose Journey date</h3>
+                      
+                            <input type="date" name="jdate" id="journey_date" class="info" required>
+                            <script>
+                                // Get today's date and format it as YYYY-MM-DD
+                                const today = new Date();
+                                const yyyy = today.getFullYear();
+                                const mm = String(today.getMonth() + 1).padStart(2, '0'); // Months are zero-based
+                                const dd = String(today.getDate()).padStart(2, '0');
+                        
+                                const minDate = `${yyyy}-${mm}-${dd}`;
+                        
+                                // Calculate the max date, 5 days from today
+                                const maxDateObj = new Date(today);
+                                maxDateObj.setDate(today.getDate() + 5);
+                                const maxYyyy = maxDateObj.getFullYear();
+                                const maxMm = String(maxDateObj.getMonth() + 1).padStart(2, '0');
+                                const maxDd = String(maxDateObj.getDate()).padStart(2, '0');
+                                
+                                const maxDate = `${maxYyyy}-${maxMm}-${maxDd}`;
+                        
+                                // Set the min and max attributes for the journey date input
+                                const journeyDateInput = document.getElementById('journey_date');
+                                journeyDateInput.min = minDate;
+                                journeyDateInput.max = maxDate;
+                        
+                                console.log(`Min Date: ${minDate}`);
+                                console.log(`Max Date: ${maxDate}`);
+                            </script>
+
+                        <h3>Choose Time</h3>
+                            <input type="time" name="time" class="info" required><br><br>
+                            <p> <b>Service Time -</b> 6:00AM to 10:00PM <br> <b>Note: </b>Please ensure you select the correct time for your journey. Incorrect 
+                                time entries may result in issues with your booking, and we cannot process refunds for mistakes. 
+                                For accurate timetable information, please refer to our <a href="timetable.html">Timetable Page.</a></p>
+
+                        <h3>Choose Gender - </h3>
+                            <input type="radio" id="Men" name="gender" value="Men">
+                                <label for="Men">Men</label>
+                            <input type="radio" name="gender" value="Female">
+                                <label for="Female">Female</label>
+                            <input type="radio" id="Other" name="gender" value="Other">
+                                <label for="Other">Other</label><br><br>
+
+                        <h3>Scan QR code - </h3>
+                        <div class="upi">
+                        <img src="upi.jpg" height="50px" width="90px">
+                        <label for="upi">punemetrorail@oksbi</label>
+                        </div>
+                        <div class="qrcode">
+                            <img src="paymentqr.jpg" width="200px" height="200px">
+                            <input type="checkbox" required>Payment Done<br><br>
+                        </div>
+                        
+
+                        <button type="submit" onclick="alert('Collecting Data...')" value="Submit">Submit</button>
+            </div>
+        </div>
+
+        </form>
+        <script>
+            const fareChart = {
+            
+    "PCMC": {
+        "Sant Tukaram Nagar": 15,
+        "Bhosri": 15,
+        "Kasarwadi": 20,
+        "Phugewadi": 20,
+        "Dapodi": 25,
+        "Bhopodi": 25,
+        "Shivaji Nagar": 30,
+        "District Court": 30,
+        "Vanaz": 35,
+        "Anand Nagar": 35,
+        "Ideal colony": 30,
+        "Nal stop": 30,
+        "Garware College": 30,
+        "Deccan gymkhana": 30,
+        "Chhatrapati Sambhaji Udhyan": 30,
+        "PMC": 30,
+        "Mangalwar Peth": 30,
+        "Pune Railway Station": 30,
+        "Ruby Hall Clinic": 30,
+        "Bundgarden": 30,
+        "Kalyan Nagar": 35,
+        "Ramwadi": 35
+    },
+    "Sant Tukaram Nagar": {
+        "PCMC": 15,
+        "Bhosri": 10,
+        "Kasarwadi": 15,
+        "Phugewadi": 15,
+        "Dapodi": 15,
+        "Bhopodi": 20,
+        "Shivaji Nagar": 25,
+        "District Court": 25,
+        "Vanaz": 30,
+        "Anand Nagar": 30,
+        "Ideal colony": 30,
+        "Nal stop": 30,
+        "Garware College": 30,
+        "Deccan gymkhana": 30,
+        "Chhatrapati Sambhaji Udhyan": 30,
+        "PMC": 25,
+        "Mangalwar Peth": 25,
+        "Pune Railway Station": 30,
+        "Ruby Hall Clinic": 30,
+        "Bundgarden": 30,
+        "Kalyan Nagar": 30,
+        "Ramwadi": 35
+    },
+    "Bhosri": {
+        "PCMC": 15,
+        "Sant Tukaram Nagar": 10,
+        "Kasarwadi": 10,
+        "Phugewadi": 15,
+        "Dapodi": 15,
+        "Bhopodi": 20,
+        "Shivaji Nagar": 25,
+        "District Court": 25,
+        "Vanaz": 30,
+        "Anand Nagar": 30,
+        "Ideal colony": 30,
+        "Nal stop": 30,
+        "Garware College": 30,
+        "Deccan gymkhana": 30,
+        "Chhatrapati Sambhaji Udhyan": 25,
+        "PMC": 25,
+        "Mangalwar Peth": 25,
+        "Pune Railway Station": 25,
+        "Ruby Hall Clinic": 30,
+        "Bundgarden": 30,
+        "Kalyan Nagar": 30,
+        "Ramwadi": 35
+    }, 
+    "Kasarwadi": {
+        "PCMC": 20,
+        "Sant Tukaram Nagar": 15,
+        "Bhosri": 10,
+        "Phugewadi": 10,
+        "Dapodi": 10,
+        "Bhopodi": 15,
+        "Shivaji Nagar": 25,
+        "District Court": 25,
+        "Vanaz": 30,
+        "Anand Nagar": 30,
+        "Ideal colony": 30,
+        "Nal stop": 30,
+        "Garware College": 25,
+        "Deccan gymkhana": 25,
+        "Chhatrapati Sambhaji Udhyan": 25,
+        "PMC": 25,
+        "Mangalwar Peth": 25,
+        "Pune Railway Station": 25,
+        "Ruby Hall Clinic": 25,
+        "Bundgarden": 30,
+        "Kalyan Nagar": 30,
+        "Ramwadi": 30
+    },
+    "Phugewadi": {
+        "PCMC": 20,
+        "Sant Tukaram Nagar": 15,
+        "Bhosri": 15,
+        "Kasarwadi": 10,
+        "Dapodi": 10,
+        "Bhopodi": 15,
+        "Shivaji Nagar": 25,
+        "District Court": 25,
+        "Vanaz": 30,
+        "Anand Nagar": 30,
+        "Ideal colony": 30,
+        "Nal stop": 25,
+        "Garware College": 25,
+        "Deccan gymkhana": 25,
+        "Chhatrapati Sambhaji Udhyan": 25,
+        "PMC": 25,
+        "Mangalwar Peth": 25,
+        "Pune Railway Station": 25,
+        "Ruby Hall Clinic": 25,
+        "Bundgarden": 25,
+        "Kalyan Nagar": 30,
+        "Ramwadi": 30
+    },
+    "PCMC": {
+        "Sant Tukaram Nagar": 20,
+        "Bhosri": 30,
+        "Kasarwadi": 40,
+        "Phugewadi": 50,
+        "Dapodi": 60,
+        "Bhopodi": 70,
+        "Shivaji Nagar": 80,
+        "District Court": 90,
+        "Vanaz": 100,
+        "Anand Nagar": 110,
+        "Ideal colony": 120,
+        "Nal stop": 130,
+        "Garware College": 140,
+        "Deccan gymkhana": 150,
+        "Chhatrapati Sambhaji Udhyan": 160,
+        "PMC": 170,
+        "Mangalwar Peth": 180,
+        "Pune Railway Station": 190,
+        "Ruby Hall Clinic": 200,
+        "Bundgarden": 210,
+        "Kalyan Nagar": 220,
+        "Ramwadi": 230
+    },  
+    // Continue for other stations like Kasarwadi, Phugewadi, etc.
+
+
+                // Add fare details for other stations
+            };
+    
+            function calculateFare() {
+                const fromStation = document.getElementById('station-select-from').value;
+                const toStation = document.getElementById('station-select-to').value;
+                let fare = 0;
+    
+                if (fromStation && toStation && fromStation !== toStation) {
+                    fare = fareChart[fromStation][toStation] || 0; // Fetch fare from fareChart
+                }
+    
+                document.getElementById('fare-display').textContent = `₹ ${fare.toFixed(2)} rs`;
+            }
+    
+            document.getElementById('station-select-from').addEventListener('change', calculateFare);
+            document.getElementById('station-select-to').addEventListener('change', calculateFare);
+        </script>
+
+        <div class="social-media">
+            <h2>Follow Us</h2>
+            <a href="https://www.facebook.com/Pune Metro Rail Project" target="_blank">
+                <img src="facebook_2504903.png" alt="Facebook" width="40" height="40">
+            </a>
+            <a href="https://twitter.com/@metrorailpune" target="_blank">
+                <img src="twitter_5968830.png" alt="Twitter" width="40" height="40">
+            </a>
+            <a href="https://www.instagram.com/metrorailpune/" target="_blank">
+                <img src="instagram_2111463.png" alt="Instagram" width="40" height="40">
+            </a>
+            <a href="https://www.youtube.com/channel/UCm6Tcz16_xr8vjmgK3ViFOw" target="_blank">
+                <img src="youtube_1384060.png" alt="LinkedIn" width="40" height="40">
+            </a>
+        </div>
+
+</body>
+</html>

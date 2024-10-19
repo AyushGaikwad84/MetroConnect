@@ -1,0 +1,161 @@
+<html lang="en">
+<head>
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="simple.css">
+
+        <link rel="icon" type="image/x-icon" href="MetroConnectLogo.png">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <style>
+        body{
+            /* background-color:#FF9800;   */
+            background-color: #E8F5E9;
+            backdrop-filter: blur(2px);
+            background-repeat: no-repeat;
+            background-position: 100% 100%;
+            background-attachment:fixed;
+            background-size: 100% 100%;
+            margin: 0;
+            /* padding: 0; */
+            font-family: "Poppins", "Roboto", "Open Sans", "Lato", sans-serif;
+        }
+        image{
+            width: 1345px;
+            height: 700px;
+        }
+        form {
+            margin-top: 20px;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.6);
+        }
+        .formdiv{
+            background-color: #fff;
+            margin: 0px 160px;
+        }
+        select {
+            width: 950px;
+            height: 60px;
+            padding: 10px;
+            font-size: 18px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+            border: 2px solid #aaaaaa;
+            color: #6a6b6b;
+        }
+        textarea{
+            resize: none;
+            text-align: left;
+            padding-left: 20px;
+            padding-top: 18px;
+            margin-bottom: 30px;
+            font-size: 18px;
+            border: 2px solid #aaaaaa;
+        }
+        h1{
+            text-align: left;
+            margin-left: 200px;
+            margin-top: 50px;
+            font-size: 40px;
+            color: #333333;
+        }
+        h3{
+            margin-right: 82%;
+            color: #5A6A8D;
+            margin-bottom: 10px;
+        }
+        input{
+            width: 950px;
+            height: 50px;
+            margin-bottom: 15px;
+            padding-left: 20px;
+            font-size: 18px;
+            border: 2px solid #aaaaaa;
+            border-radius: 5px;
+        }
+        input[type="submit"] {
+        background-color: #1A237E;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        width: 70%;
+        height: 55px;
+        cursor: pointer;
+        font-size: 20px;
+        transition: background-color 0.3s ease;
+    }
+
+        </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo"><a href="MetroConnect.html"><img src="MetroConnectLogo.png">MetroConnect</a>
+        </div>
+        <ul class="menu">
+            <li><a href="MetroConnect.html">Home</a></li>
+            <li><a href="About MetroConnect.html">About</a></li>
+            <li><a href="service.html">Service</a></li>
+            <li><a href="contact.html">Contact</a></li>
+           <button><a href="booking.html">Book Ticket</a></button>
+           <button><a href="log.html">Login/sign up</a></button>
+        </ul>
+    </nav> 
+    
+    <div class="image">
+        <img src="metro13.jpg" width="1345px" height="700px">
+    </div>
+
+    <h1>Contact Us</h1>
+
+    <div class="formdiv">
+
+    <form method="post" action="contact.php">
+
+        <h3>Enter Name:</h3>
+        <input type="text" name="uname" placeholder="Enter Full Name" required>
+
+        <h3>Enter E-mail:</h3>
+        <input type="email" name="email" placeholder="Enter your email address" required>
+
+        <h3>Enter Phone No:</h3>
+        <input type="tel" name="phno" placeholder="Enter Phone No (optional)" minlength="10" maxlength="10">
+
+        <h3>Choose One:</h3>
+        <select id="help" name="type">
+            <option value="select type">---Select Type---</option>
+            <option value="General Query">General Query</option>
+            <option value="Suggestons">Suggestions</option>
+            <option value="Bug Report">Bug Report</option>
+            <option value="Complaint">Complaint</option>
+        </select>
+
+        <h3>Describe Here:</h3>
+        <textarea name="description" placeholder="Share your feedback, question, or report a problem here..." rows="7" cols="101" required></textarea>
+
+        <input type="submit" value="submit">
+
+    </form>
+    </div>
+
+    <div class="social-media">
+        <h2>Follow Us</h2>
+        <a href="https://www.facebook.com/Pune Metro Rail Project" target="_blank">
+            <img src="facebook_2504903.png" alt="Facebook" width="40" height="40">
+        </a>
+        <a href="https://twitter.com/@metrorailpune" target="_blank">
+            <img src="twitter_5968830.png" alt="Twitter" width="40" height="40">
+        </a>
+        <a href="https://www.instagram.com/metrorailpune/" target="_blank">
+            <img src="instagram_2111463.png" alt="Instagram" width="40" height="40">
+        </a>
+        <a href="https://www.youtube.com/channel/UCm6Tcz16_xr8vjmgK3ViFOw" target="_blank">
+            <img src="youtube_1384060.png" alt="LinkedIn" width="40" height="40">
+        </a>
+    </div>
+
+</body>
+</html>
