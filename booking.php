@@ -97,13 +97,6 @@ if($check){
         mkdir($qr_dir, 0777); // Create directory with full permissions. mkdir stands for make directory. 
                                     // 0777 is used for giving full read, write permissions for owner, group,etc.
     }
-
-                // Generate the QR code file.  dot(.) is a string concatenation operator. It is used to join multiple strings together into one.
-                // we used $random for creating unique file name, & .png is an extension. the syntax looks like 'qr_codes/123abc.png'
-                // In QRcode::png() 'Passenger' to 'jdate' is the information which is stored in the QR code. 
-                // $filename is for path to save it.
-                // Error correction level for the QR code, which determines how much data can be restored if the QR code is damaged. QR_ECLEVEL_L (low) allows for 7% error correction.
-                // This is the size of QR code 5 means medium.
     $filename = $qr_dir . $random . '.png';
     QRcode::png('Passenger: ' . $pname . ', From: ' . $from . ', To: ' . $to . ', Date: ' . $jdate, $filename, QR_ECLEVEL_L, 5);
 
@@ -121,44 +114,3 @@ $conn->close();
 
 </body>
 </html>
-
-<!-- 
-    so now here is explaination of how we create qr code automatically. here is a step by step points - 
-
-        1:  go to browser and search- sourceforge.net/projects/phpqrcode/ . this is an php liberary for creating 2D QR codes. 
-            download it and extract file in your project folder 'project sem 5'. and create another folder in your project folder name 
-            'qr_codes'.
-
-        2:  add 'require 'phpqrcode/qrlib.php';' in your php code  here is a directory 
-                C:\xampp\htdocs\project sem 5\
-                ├── booking.php
-                └── phpqrcode\
-                    ├── qrlib.php
-                    └── (other QR code related files)
-
-        3:  if it shows error like this 'Fatal error: Uncaught Error: Call to undefined function ImageCreate()' bez GD liberary is disabled. 
-            ImageCreate() fun is not available. to solve this seacrh ' php.ini' and search ';extension=gd' when you find it just remove 
-            semicolon(;) save the file and restart apache and MySql server.
-
-        4:  after that if it shows error like this 'Warning: imagepng(qr_codes/66f1982b2791f.png): Failed to open stream: 
-            No such file or directory in C:\xampp\htdocs\project sem 5\phpqrcode\qrimage.php on line 43' this tells you that your qr_codes 
-            folder is not exist. so create it in your project folder and go to properties and *uncheck* the readonly option and apply. 
-            and write code which is on now between 93-103 lines.
-
-        5:  now again run if it shows error of undefined variable $random so write $random= uniqid(); / $random=rand(9999,99999);min,max.
-
-        ---so below add-on notes is given by chatgpt -
-        
-        1:  Directory Permissions: Ensure that the qr_codes folder has the correct read/write permissions (777) if the system still fails 
-            to generate QR codes. You can adjust permissions in the file manager or via a terminal.
-
-        2:  QR Code Size and Error Correction: You can control the size and error correction level of the QR code using the parameters 
-            in QRcode::png(). For example, you can set a higher error correction level if needed.
-
-        3:  File Path Validation: Always ensure the file path provided for saving the QR code is valid. If the qr_codes/ folder path is incorrect, 
-            it may not save the image.
-
-        4:  Dynamic QR Code Data: The data encoded in the QR code can be dynamically modified by passing additional parameters 
-            (e.g., journey details, user info) into the QRcode::png() method.
-
--->
