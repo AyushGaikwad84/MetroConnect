@@ -20,5 +20,5 @@ For more secure payment options, future versions of MetroConnect will consider i
 
 📬 Contact
 For any queries or suggestions, feel free to reach out:
-Email: your-ayushsgaikwad8480@gmail.com
+Email: ayushsgaikwad8480@gmail.com
 GitHub: AyushGaikwad84
