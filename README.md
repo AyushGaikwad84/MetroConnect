@@ -14,7 +14,7 @@ Book Ticket Page - ![image](https://github.com/user-attachments/assets/1c5098c4-
                     ![image](https://github.com/user-attachments/assets/e79e0eb9-1c87-46e4-b45d-73fe4a3a29da)
 After Ticket Generation - ![image](https://github.com/user-attachments/assets/9f96cb6f-bfde-405a-946a-e7c954eec476)
 
-----------
+---------- In Home Page Following Pages are there ----------
 Time Table page - ![image](https://github.com/user-attachments/assets/45058ad1-5476-4270-8ad4-777f6ab58db7)
                   ![image](https://github.com/user-attachments/assets/caf918d6-1a43-4d80-aabb-94bd465f0db2)
 Fare chart page - ![image](https://github.com/user-attachments/assets/c9a7023e-c799-4800-bc71-6df4bae0c7ce)
